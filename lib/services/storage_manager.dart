@@ -6,10 +6,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sinfpics2/models/pic.dart';
 
 class StorageManager {
-  Future<Directory> picsFolder;
-  Future<Directory> thumbsFolder;
-
-  StorageManager();
+  late Future<Directory?> picsFolder;
+  late Future<Directory?> thumbsFolder;
 
   Future init() async {
     this.picsFolder = this.resolvePicsFolder();
